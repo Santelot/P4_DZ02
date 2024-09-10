@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook P4-DZ02</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook P4-DZ02</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="40">40 minutos</option>
+            </select>
+        </div>
+        
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_mision')">
+                <div class="title">📚 Actividad 0: Revisión Misión (1 paso) ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Revisar la misión del día.</div>
+            </div>
+            <div id="revision_mision" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Revisar diapositiva 1 para poder preparar la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('saludo_ritual')">
+                <div class="title">🎉 Actividad 1: Saludo y Ritual Gnius Club (4 pasos) ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Dar la bienvenida a los Genios y preparar el ambiente para el aprendizaje.</div>
+            </div>
+            <div id="saludo_ritual" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar diapositiva 2 "Gnius Club".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, Detectives de Datos! Hoy vamos a embarcarnos en una misión muy importante donde aprenderemos a proteger nuestra información en línea. ¿Están listos para descubrir lo que es seguro compartir?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Revisar diapositiva 3 "¿Cómo están?".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy, antes de comenzar nuestra misión, vamos a hacer una pequeña actividad de detectives. Imaginen que están usando su lupa para observar cómo se sienten. Si hoy se sienten llenos de energía y listos para resolver misterios, hagan una gran sonrisa y den un paso adelante. Si se sienten un poco cansados, pongan sus manos en sus bolsillos y den un pequeño suspiro. ¡Vamos a ver cómo están nuestros detectives!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Revisar diapositiva 4 "Gracias por Asistir".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, juntemos nuestras manos en agradecimiento por lo que vamos a aprender hoy. Gracias por asistir y estar aquí listos para proteger nuestra información.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Revisar Diapositiva 5 "Objetivos de la Misión".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy, tenemos tres grandes objetivos: 1. Identificar qué información es segura para compartir. 2. Diferenciar entre lo que debemos proteger y lo que podemos compartir. 3. Ser auténticos Detectives de Datos en línea.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('innovacion_dia')">
+                <div class="title">💡 Actividad 2: Innovación del Día (2 pasos) ⏰ Tiempo: 4 minutos</div>
+                <div class="subtitle">Introducir a los estudiantes a un concepto innovador relacionado con el tema.</div>
+            </div>
+            <div id="innovacion_dia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Revisar diapositiva 6 "Innovacion del día"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy vamos a aprender sobre una tecnología de seguridad que usamos todos los días sin darnos cuenta: el reCAPTCHA. ¿Alguna vez han tenido que marcar una casilla que dice 'No soy un robot'? Eso es un reCAPTCHA, y nos ayuda a verificar si quien está intentando acceder a una cuenta es una persona o un programa/ robot. Vamos a ver un video que nos explicará cómo funciona.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (3 minutos):</strong> Revisar diapositiva 7 del video "¿Cómo funciona reCAPTCHA?"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Qué les pareció el video? Ahora que sabemos cómo funciona reCAPTCHA, pensemos en por qué es tan importante. Imagina que un programa intenta acceder a tus cuentas en línea. Si no tenemos reCAPTCHA, ese programa podría entrar fácilmente. Con reCAPTCHA, solo los humanos pueden pasar la verificación. Es como una puerta extra que protege nuestra información.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('brain_gym')">
+                <div class="title">🧠 Actividad 3: Brain Gym (7 pasos) ⏰ Tiempo: 16 minutos</div>
+                <div class="subtitle">Introducir el Brain Gym y preparar a los estudiantes para aprender sobre la protección de información personal.</div>
+            </div>
+            <div id="brain_gym" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Revisar Diapositiva 8 "Brain Gym".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, hoy vamos a hablar sobre un tema muy importante: la protección de nuestra información personal. Vamos a descubrir por qué es tan importante mantenerla segura. Así que pongan atención porque dentro de lo que voy a explicar hay un Easter Egg. Al final de la clase voy a lanzar una pregunta y quien la responda, ganará un mon-e</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Revisar Diapositiva 9 "Log in"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora sí, abran su navegador y vayan al sitio que aparece en pantalla para acceder a los recursos de la clase. Vamos a realizar la Lección 2: Quest, Challenge y Misión. Para realizar esta actividad tendremos un tiempo de 10 minutos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Revisar Diapositiva 10 " Realizar Lección 2: Quest, Challenge y Misión"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (10 minutos):</strong> Revisar Diapositiva 11 "Let's go"-TIMER de 10 minutos</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (2 minutos):</strong> Revisar Diapositiva 12 "Pregunta Interactiva".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Qué harían si alguien que no conocen les pide su número de teléfono en un chat? ¿Y si les llega un correo electrónico extraño pidiéndoles su contraseña? Levanten la mano si creen que es mejor no compartir esa información.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 6 (1 minuto):</strong> Revisar Diapositiva 13 "Reflexión".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, hemos aprendido que es muy importante ser cuidadosos con nuestra información personal. Siempre debemos pensar dos veces antes de compartir algo en línea. Recuerden, la seguridad en internet depende de nosotros.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 7 (0.5 minutos):</strong> Revisar diapositiva 14" Objetivos alcanzados"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('brain_vitamin')">
+                <div class="title">🧠 Actividad 5: Brain Vitamin / State Change (1 paso) ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Preparar a los estudiantes para la siguiente actividad.</div>
+            </div>
+            <div id="brain_vitamin" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Revisar Diapositiva 15 "Brain Vitamin"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, vamos a hacer algo divertido para prepararnos para nuestra misión. Vamos a jugar a ser detectives que buscan pistas en silencio. Por 15 segundos, caminen por el salón como si estuvieran buscando una pista, sin hacer ruido. Cuando yo diga DETECTIVES ustedes de inmediato regresarán a su lugar.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-6" class="activity">
+            <div class="banner" onclick="toggleContent('team_gnius')">
+                <div class="title">👥 Actividad 6: Team Gnius (4 pasos) ⏰ Tiempo: 2.5 minutos</div>
+                <div class="subtitle">Formar equipos y prepararse para el desafío.</div>
+            </div>
+            <div id="team_gnius" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar Diapositiva 16 "Team Gnius".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, es momento de formar equipos. Cada equipo tendrá 4 o 5 integrantes. Encuentra a tus compañeros de misión y siéntate con ellos. Tienen 30 segundos para organizarse. ¡Adelante!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Revisar Diapositiva 17 "Team Ginius- Timer 30 Segundos".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Revisar Diapositiva 18 "Recoger materiales".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que tienen a sus equipos, un miembro de cada equipo pasará al frente para recoger las tarjetas y las Magic Tablets. Tienen un minuto para hacerlo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Revisar Diapositiva 19 "Team Ginius- Timer 1 Minuto".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-7" class="activity">
+            <div class="banner" onclick="toggleContent('challenge')">
+                <div class="title">⚔️ Actividad 7: Challenge (5 pasos) ⏰ Tiempo: 18 minutos</div>
+                <div class="subtitle">Realizar el desafío principal de la clase.</div>
+            </div>
+            <div id="challenge" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Revisar Diapositiva 20 "Challenge: Detectives de Datos".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, ahora es tiempo del desafío! Hoy vamos a usar nuestras habilidades de detective para decidir qué información es segura de compartir en línea y cuál debemos proteger. Cada equipo recibirá una tarjeta digital que se proyectará en pantalla. El equipo debe decidir si la información en esa tarjeta es segura para compartir o no.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1.5 minutos):</strong> Revisar Diapositiva 21 "Asignar tarjetas" Dar instrucciones sobre el uso de las tarjetas".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a asignar las tarjetas digitales, deben ubicarlas en la pantalla. Cada equipo tendrá 5 minutos para discutir su tarjeta y pensar si la información de la tarjeta es segura para compartir, escriban en su magic tablet los motivos para justificar su respuesta. Finalmente cuando el equipo esté listo, esperemos a que los demás terminen guiándonos con el cronómetro.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (12 minutos):</strong> Revisar la diapositiva 22"Challenge-TIMER de 5 minutos</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (2.5 minutos):</strong> Revisar diapositiva 23 "Game Over" y Revisar la diapositiva 24 "Revisión del Trabajo".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que ya revisaron todas las tarjetas, vamos a revisar cada una y discutir por qué es seguro o no compartir esa información en línea. Además de verificar la respuesta correcta a cada una. ¿Quién quiere compartir sus resultados antes de conocer la respuesta verdadera?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (1 minuto):</strong> Revisar diapositiva 25 "Respuestas correctas"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-8" class="activity">
+            <div class="banner" onclick="toggleContent('easter_egg')">
+                <div class="title">🥚 Actividad 8: Easter Egg (5 pasos) ⏰ Tiempo: 4 minutos</div>
+                <div class="subtitle">Realizar la actividad sorpresa del Easter Egg.</div>
+            </div>
+            <div id="easter_egg" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar diapositiva 26 "Easter Egg".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Sorpresa, Detectives! Ahora es el momento de ver quién ha estado prestando atención. La siguiente diapositiva tiene una pregunta sobre algo que discutimos hoy. Voy a premiar con Mon-e a las tres primeras personas que me den la respuesta correcta. ¿Listos?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Revisar diapositiva 27 "Pregunta del Easter Egg".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí va la pregunta: Los Cracks robaron nuestras llaves digitales: ¿qué tipo de información protegían esas llaves?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Observar a los estudiantes y seleccionar a 3 para que den su respuesta.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Veamos, ¿quién sabe la respuesta? Levanten la mano... [Seleccionar a 3 estudiantes].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Revisar Diapositiva 28 "Respuesta correcta"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, la respuesta correcta es que es: "Información sensible". ¡Excelente trabajo, Detectives!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (1 minuto):</strong> Proyectar diapositiva 29 "Money time"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-9" class="activity">
+            <div class="banner" onclick="toggleContent('honor_dojo')">
+                <div class="title">🎖️ Actividad 9: Honor de Dojo (3 pasos) ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Cerrar la clase y reconocer los logros de los estudiantes.</div>
+            </div>
+            <div id="honor_dojo" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1.5 minutos):</strong> Revisar Diapositiva 30 "Objetivos alcanzados" Celebrar a los estudiantes que demostraron trabajo en equipo y toma de decisiones acertadas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy quiero reconocer el esfuerzo y la colaboración que todos mostraron durante nuestra misión. Pero, en especial, quiero felicitar a [Nombre], [Nombre], y [Nombre] por su capacidad para tomar decisiones acertadas y trabajar en equipo. ¡Gran trabajo, Detectives!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Revisar diapositiva 31 "Ordenar lugar de trabajo".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Antes de despedirnos, vamos a reflexionar sobre la importancia de mantener nuestro espacio de trabajo ordenado. Un buen detective siempre deja su área limpia y preparada para la próxima misión. Tomemos 2 minutos para recoger todo y dejar el salón en perfecto estado.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Revisar diapositiva 32 "Honor the Lab"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            if (time === "45") {
+                document.getElementById("activity-2").querySelector("tr:nth-child(2)").style.display = "none";
+            } else if (time === "40") {
+                document.getElementById("activity-2").querySelector("tr:nth-child(2)").style.display = "none";
+                document.getElementById("activity-1").querySelector("tr:nth-child(2)").style.display = "none";
+            } else {
+                document.getElementById("activity-2").querySelector("tr:nth-child(2)").style.display = "";
+                document.getElementById("activity-1").querySelector("tr:nth-child(2)").style.display = "";
+            }
+        }
+    </script>
+</body>
+</html>
